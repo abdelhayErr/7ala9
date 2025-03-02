@@ -1,0 +1,404 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: 'Nautilius Pompilius';
+    src: url('NautiliusPompilius.woff2') format('woff2'),
+         url('NautiliusPompilius.woff') format('woff');
+  }
+
+.bg {
+    animation:slide 4s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, rgb(84, 83, 83) 50%, black 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:5s;
+  }
+  
+  .bg3 {
+    animation-duration:6s;
+  }
+  
+
+  
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
+body
+{
+    background-color: #222227;
+    background-image: url(../img/inchea.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 10% -50% ;
+
+    height: 100%;
+}
+header
+{
+   height: 120px;
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
+   background-color: rgba(0, 0, 0, 0.061);
+}
+header img
+{
+    width: 150px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+
+.filter{
+    position: absolute;
+     width: 100vw;
+    height: 100vh;
+    top: 0;
+    background-color: #0000007a;
+    z-index: -1;
+    font-family: 'Courier New', Courier, monospace;
+}
+main
+{
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+.title
+{
+    width: 50vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 140px;
+    align-items: flex-end;
+    height: 500px;
+    overflow: hidden;
+
+}
+.title h1
+{
+    font-size: 3.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 30px;
+}
+.title p
+{
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 100;
+    line-height: 20px;
+    color: rgb(219, 219, 219);
+    margin-bottom: 50px;
+
+    
+}
+.title img
+{
+    width: 170px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.title .store
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.containerTitle
+{
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    width: 600px;
+
+}
+.app
+{
+    width: 50vw;
+    padding-top: 50px;
+    display: flex;
+    justify-items: end;
+    margin-left: 100px;
+}
+.app img
+{
+    width: 270px;
+    height: 570px;
+    margin-left: 50px;
+}
+#text-border {
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+    font-size: 20px;
+}
+.hachTag
+{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.hachTag img
+{
+    width:650px;
+    height: auto;
+}
+
+@media (max-width: 1389px)
+{
+    .app
+    {
+        margin-left: 0;
+        padding-left: 0;
+    }
+    .hachTag img
+    {
+        width:90%;
+    }
+}
+
+@media(max-width: 1296px)
+{
+    .containerTitle
+    {
+        width:100% ;
+    }
+    .title
+    {
+        padding-top: 90px;
+        width: 40%;
+    }
+    .hachTag img
+    {
+        height: auto;
+    }
+}
+@media(max-width: 1180px)
+{
+    .app
+    {
+        width: 55%;
+        padding-left: 0;
+        margin-left: 0;
+        justify-items: none;
+    }
+}
+@media(max-width: 1123px)
+{
+    .app img:nth-child(2)
+    {
+        
+        display: none;
+    }
+    .app
+    {
+        width: 50%;
+    }
+    .app img
+    {
+        margin-left: 100px;
+    }
+    .title
+    {
+        width: 50%;
+    }
+    .containerTitle
+    {
+        width:90% ;
+    }
+}
+@media(max-width: 850px)
+{
+    .containerTitle
+    {
+        width:91% ;
+    }
+    .title h1
+    {
+        font-size: 3rem;
+    }
+    .title p
+{
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: 20px;
+    color: rgb(219, 219, 219);
+    margin-bottom: 50px;
+
+    
+}
+}
+@media(max-width: 790px)
+{
+    main
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+    .app
+    {
+        order: 1;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+        margin-left: 0;
+    }
+    .app #img
+    {
+        margin-left: 0px;
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-self: center;
+    }
+    
+    
+    .title
+    {
+        width: 100%;
+        order: 2;
+        display: flex;
+        align-items: center;
+        padding-top: 50px;
+    }
+    .containerTitle
+    {
+        width:90% ;
+    }
+    .title h1
+    {
+        font-size: 3rem;
+    }
+    .filter
+    {
+        height: 1300px;
+    }
+    .hachTag
+    {
+        width: 100%;
+        display: flex;
+        justify-content:center;
+    }
+}
+
+@media(max-width: 620px)
+{
+    .filter
+    {
+        height: 1300px;
+    }
+    .title img {
+        margin-left: 0;
+    }
+    .title .store
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+    }
+    .title .store img
+    {
+        width: 200px;
+        height: 60px;
+    }
+    .title img {
+ 
+        margin-bottom: 10px;
+    }
+    .title
+    {
+        height: 630px;
+    }
+    .filter
+    {
+        height: 1430px;
+    }
+
+}
+
+
+
+@media(max-width: 390px)
+{
+    .title .store
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+    }
+    .title .store img
+    {
+        width: 200px;
+        height: 60px;
+    }
+    .title img {
+ 
+        margin-bottom: 10px;
+    }
+    .title
+    {
+        height: 600px;
+    }
+    .filter
+    {
+        height: 1440px;
+    }
+    .title img {
+        margin-left: 0;
+    }
+}
+@media(max-width: 362px)
+{
+    .filter
+    {
+        height: 1550px;
+    }
+    .hachTag
+    {
+        height: 900px;
+        width: 100%;
+    }
+    .hachTag img
+    {
+        width: 100%;
+        padding-left: 0;
+    }
+    .title
+    {
+        height: 100vh;
+    }
+    .title img {
+        margin-left: 0;
+    }
+}
